@@ -15,7 +15,7 @@ class Config:
 
 
 class DevelopmentConfig(Config):
-    pass
+    DEBUG = True
 
 
 class TestConfig(Config):
@@ -30,6 +30,7 @@ class DeployConfig(Config):
 
 config = {
     'default': Config,
+    'dev': DevelopmentConfig,
     'testing': TestConfig,
     'deploy': DeployConfig
 }
